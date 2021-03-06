@@ -25,7 +25,7 @@ class Searchbar extends Component {
           <button type="submit" className={styles.button}>
             <span className={styles.label}>Search</span>
           </button>
-          <input className={styles.input} type="text" value={this.state.query} onChange={this.handleChange} />
+          <input className={styles.input} autoComplete="off" autoFocus placeholder="Search images and photos" type="text" value={this.state.query} onChange={this.handleChange} />
         </form>
       </header>
     )
