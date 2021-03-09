@@ -5,21 +5,16 @@ import { createPortal } from "react-dom"
 const modalRoot = document.querySelector("#modal-root")
 class Modal extends Component {
   componentDidMount() {
-    console.log("did")
     window.addEventListener("keydown", this.handleKeyDown)
   }
 
   componentWillUnmount() {
-    console.log("will")
     window.removeEventListener("keydown", this.handleKeyDown)
   }
 
   handleKeyDown = (e) => {
-    {
-      if (e.code === "Escape") {
-        console.log("dsf")
-        this.props.onClose()
-      }
+    if (e.code === "Escape") {
+      this.props.onClose()
     }
   }
 

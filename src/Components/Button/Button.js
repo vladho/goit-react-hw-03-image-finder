@@ -10,6 +10,9 @@ const Button = ({ look, onClick }) => {
   )
 }
 
-Button.propTypes = {}
+Button.propTypes = {
+  look: PropTypes.string.isRequired,
+  onclick: PropTypes.func,
+}
 
 export default Button
